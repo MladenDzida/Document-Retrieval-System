@@ -1,0 +1,26 @@
+version: '3'
+services:
+  jupyter:
+    build: .
+    ports:
+      - "8080:8080"
+      - "8501:8501"
+    networks:
+      - rag
+
+  chromadb:
+    image: chromadb/chroma:latest
+    volumes:
+      - ./chroma_db:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/chroma # this is the default path, change it as needed
+      - ANONYMIZED_TELEMETRY=${ANONYMIZED_TELEMETRY:-TRUE}
+    ports:
+      - 8000:8000
+    networks:
+      - rag
+
+networks:
+  rag:
+    driver: bridge
