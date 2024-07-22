@@ -24,7 +24,12 @@ This project is a Python application designed to perform document retrieval usin
 There are two ways to setup the project:
 Directly download the image from Docker Hub:
 <ol>
-  <li> download and extract this [zip](https://drive.google.com/file/d/1Uj2g2FaoYMYJafe5xdkV71aHFYsFpKPB/view?usp=sharing) </li>
+  <li>
+    download and extract this [zip][1]
+    
+    [1]: https://drive.google.com/file/d/1Uj2g2FaoYMYJafe5xdkV71aHFYsFpKPB/view?usp=sharing
+    
+  </li>
   <li> run "docker-compose up"</li>
   <li>open http://localhost:8501 for the streamlit app to test the model response (to run the model you need to set Hugging Face access token you can generate on their site)</li>
   <li>open http://localhost:8080 for the jupyter server with the RAG storybook</li>
