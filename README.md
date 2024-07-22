@@ -20,7 +20,8 @@ This project is a Python application designed to perform document retrieval usin
 
 ## Setup and Usage
 <ol>
-  <li>Clone the repository</li>
+  <li>Clone the repository. <br>
+      NOTE: add flag "-c core.autocrlf=false" to your git clone command to prevent auto conversion to crlf file endings. For example: git clone -c core.autocrlf=false https://github.com/MladenDzida/Document-Retrieval-System</li>
   <li>Build and run Docker containers: docker-compose up</li>
   <li>open http://localhost:8501 for the streamlit app to test the model response (to run the model you need to set Hugging Face access token you can generate on their site)</li>
   <li>open http://localhost:8080 for the jupyter server with the RAG storybook</li>
