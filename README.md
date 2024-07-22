@@ -21,8 +21,8 @@ This project is a Python application designed to perform document retrieval usin
 </ol>
 
 ## Setup and Usage
-There are two ways to setup the project:
-Directly download the image from Docker Hub:
+There are two ways to setup the project: <br>
+<b>Directly download the image from Docker Hub:</b>
 <ol>
   <li>
     download and extract zip from: https://drive.google.com/file/d/1Uj2g2FaoYMYJafe5xdkV71aHFYsFpKPB/view?usp=sharing
@@ -31,7 +31,7 @@ Directly download the image from Docker Hub:
   <li>open http://localhost:8501 for the streamlit app to test the model response (to run the model you need to set Hugging Face access token you can generate on their site)</li>
   <li>open http://localhost:8080 for the jupyter server with the RAG storybook</li>
 </ol>
-Build the image from the repo:
+<b>Build the image from the repo:</b>
 <ol>
   <li>Clone the repository. <br>
       NOTE: add flag "-c core.autocrlf=false" to your git clone command to prevent auto conversion to crlf file endings. For example: git clone -c core.autocrlf=false https://github.com/MladenDzida/Document-Retrieval-System</li>
