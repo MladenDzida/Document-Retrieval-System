@@ -2,11 +2,13 @@
 Document Retrieval System using RAG and LangChain.
 
 ## Overview
-This project is a Python application designed to perform document retrieval using Retrieval-Augmented Generation (RAG) and LangChain. It uses kaggle blog collection as dataset from here: [blog collection](https://www.kaggle.com/datasets/rtatman/blog-authorship-corpus/data). The data is processed and chunked, and embeddings are created for these chunks. The chunks are then stored in a Chroma DB vector database, which is managed within a Docker container. When a user asks a question, the application embeds the query, retrieves relevant documents from the database, and passes both the question and the documents to a language model (LLM) for a response. The system also supports chat history, enabling connected questions for the LLM.
+This project is a Python application designed to perform document retrieval using Retrieval-Augmented Generation (RAG) and LangChain. It uses kaggle blog collection as dataset from here: [blog collection](https://www.kaggle.com/datasets/rtatman/blog-authorship-corpus/data). The data is processed and chunked, and embeddings are created for these chunks. The chunks are then stored in a Chroma DB vector database, which is managed within a Docker container. When a user asks a question, the application embeds the query, retrieves relevant documents from the database and passes both the question and the documents to a language model (LLM) for a response. The system also supports chat history, enabling connected questions for the LLM.
 
 ## Files
 <ol>
   <li>blogtext_small.csv: Dataset used for RAG, filtered from the original dataset on Kaggle.</li>
+  <li>chroma_db: folder with already prepared data (chunked and ready for chroma vector database).</li>
+  <li>init.sh: script the runs as entrypoint to app docker container</li>
   <li>add_data_to_collection.py: Script to create data collection from the dataset for loading into Chroma DB.</li>
   <li>llm_app.py: Streamlit application for testing model responses to dataset questions.</li>
   <li>llm_responder.py: Code for generating LLM responses.</li>
